@@ -1,4 +1,4 @@
-def prime_factors(num):
+"""def prime_factors(num):
     factors = []
     factor = 2
 
@@ -11,4 +11,4 @@ def prime_factors(num):
     return factors
 
 print(prime_factors(12))
-print(prime_factors(42))
+print(prime_factors(42))"""

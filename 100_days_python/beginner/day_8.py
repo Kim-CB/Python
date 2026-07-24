@@ -1,55 +1,6 @@
 # Day 8 - Caesar Cipher
-
-
-# Functions that allows for inputs
-
-def greet_with_name(name):
-    print(f"Hello {name}")
-    print(f"How do you do {name}?")
-
-#greet_with_name("Angela")
-
-
-def life_in_weeks(semana):
-    year = semana
-    weeks_lived = year*52
-    total_weeks = 4680
-    answer = total_weeks - weeks_lived
-    print(f"Você tem {answer} semanas até seus 90 anos.")
-
-#life_in_weeks(56)
-
-#
-def greet_with(name, location):
-    print(f"Hello, {name}")
-    print(f"What is it like in {location}")
-
-# Positional Argument
-#greet_with("Kim", "Rio de Janeiro")
-# Keyword Arguments
-#greet_with(location="Nowhere", name="Jack Bauer")
-
-def calculate_love_score(name1, name2):
-    true_count = 0
-    love_count = 0
-    true_word = "true"
-    love_word = "love"
-    for char in name1:
-        if char in true_word:
-            true_count += 1
-        if char in love_word:
-            love_count += 1
-    for char in name2:
-        if char in true_word:
-            true_count += 1
-        if char in love_word:
-            love_count += 1
-    print(f"{true_count}{love_count}")
-#calculate_love_score("Angela Yu", "Jack Bauer")
 import string
-
-
-
+from caesar_art import logo
 def caeser_cypher():
     alphabet  = list(string.ascii_lowercase)
     game_over = False
@@ -76,6 +27,7 @@ def caeser_cypher():
 
     
     while not game_over:
+        print(logo)
 
         direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
         text = input("Type yout message:\n").lower()
@@ -94,6 +46,36 @@ def caeser_cypher():
         if game == "no" or game == "n":
             print("Thank you for playing.")
             game_over = True
-    
-        
+#caeser_cypher()
 
+# TODO-1 Import and print the logo form art.py when the program starts.
+# TODO-2 What happens if the user enters a number/symbol/space that's not in the List alphabet
+
+def caesar(original_text, shift_amount, encode_or_decode):
+    alphabet = list(string.ascii_lowercase)
+    output_text = ""
+    if encode_or_decode == "decode":
+                    shift_amount *= -1
+    for letter in original_text:
+        if letter not in alphabet:
+            output_text += letter
+        else:
+            shifted_position = alphabet.index(letter) + shift_amount
+            shifted_position %= len(alphabet)
+            output_text += alphabet[shifted_position]
+    print(f"Here is the {encode_or_decode} result: {output_text}")
+
+should_continue = True
+while should_continue:
+    print(logo)
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    text = input("Type yout message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+    caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
+
+    restart = input("Type 'yes' if you want to go again. Otherwise, type 'no'.\n").lower
+
+    if restart == "no":
+        should_continue = False
+        print('Goodbye')

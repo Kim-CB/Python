@@ -1,0 +1,18 @@
+Day 33 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier
+
+Application Programming Interfaces - API"s
+Project is a ISS tracker
+International Space Station (ISS) is operated by five partner space agencies: NASA (United States), Roscosmos (Russia), ESA (Europe), JAXA (Japan) and CSA (Canada).
+The ISS is the political product of the development of international cooperation in space throughout the space age.
+
+
+API - An application programming interface (API) is a connection between computers or computer programs. It is a type of software interface, offering a service to other pieces of software.
+Unlike a user interface, it is an "under the hood" portion of a software system, used for machine-to-machine communication.
+
+A well-designed API exposes only objects or actions needed by software or software developers. It hides details that have no use. This abstraction simplifies programming.
+
+Building software using APIs has been compared to using building-block toys, such as Lego bricks. Software services or software libraries are analogous to the bricks;
+they may be joined together via their APIs, composing a new software product. The process of joining is called integration.
+
+
+Project is to receive a email when the ISS tracker passes throught

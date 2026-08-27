@@ -1,0 +1,11 @@
+# Advanced Authentication and POST/PUT/DELETE Requests
+
+# Building Habit Tracker
+# Api Pixela (Japanese Developer)
+
+# HTTP Requests
+
+# GET - requests.get() -> we ask an external system a piece of data and get a response 
+# POST - requests.post() -> we give the external system a piece of data and don't care so much for the response
+# PUT - requests.put() -> simply an update in the data 
+# DELETE - requests.delete() -> wants to delete a piece of data through an api
